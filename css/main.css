@@ -368,9 +368,65 @@
     position: relative;
     margin-bottom: 72px;
 }
-.front-figure{
+
+.front-figure {
     position: absolute;
     z-index: -5;
     right: 0;
     top: -470px;
+}
+
+.cap-title {
+    font-family: "MS";
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--logocolor);
+    margin-bottom: 30px;
+}
+
+.cap-content {
+    align-items: center;
+}
+
+.accordion {
+    box-shadow: 0 0 5px 3px rgba(113, 119, 241, 0.15);
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.accordion-button {
+    display: flex;
+    gap: 20px;
+    font-family: "MB";
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--logocolor);
+}
+
+.accordion-body {
+    font-family: "MR";
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: var(--white);
+    background: var(--logocolor);
+    padding-bottom: 55px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--logocolor);
+    color: var(--white);
+}
+
+.accordion-button::after{
+    background-image: url(../img/arrow1.svg);
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../img/arrow2.png);
+    transform: rotate(360deg);
+}
+.accordion-button{
+    outline: none !important;
+    border: none !important;
 }
